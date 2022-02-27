@@ -1,0 +1,246 @@
+@font-face {
+	font-family: 'sundaybestrusbyalince';
+	src: url('fonts/sundaybestrusbyalince.eot');
+	src: local('☺'), url('fonts/sundaybestrusbyalince.woff') format('woff'), url('fonts/sundaybestrusbyalince.ttf') format('truetype'), url('fonts/sundaybestrusbyalince.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+	font-family: Montserrat, 'Times New Roman', serif;
+	color: #1F1F1F;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+}
+
+.header {
+	align-items: center;
+	padding: 15px;
+	grid-area: header;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+	background-color: #FDA3C4;
+}
+
+.header__logo {
+	grid-column: 2 / 3;
+}
+
+.header__menu {
+	grid-column: 3 / 4;
+}
+
+.header__list {
+	display: grid;
+	grid-auto-flow: column;
+	justify-items: end;
+	list-style-type: none;
+}
+
+.header__link {
+	color: #FFFFFF;
+	font-size: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.main {
+	padding: 30px 15px;
+	grid-area: main;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+
+.sidebar {
+	padding: 30px 15px;
+	grid-column: 2 / 3;
+	background-color: #FDA3C4;
+}
+
+.sidebar__list {
+	list-style-type: none;
+}
+
+.sidebar__list li {
+	margin: 0px 0px 15px 0px;
+	padding: 0px 0px 0px 50px;
+}
+
+.sidebar__list li:first-child {
+	background: url('/img/icons/корзина.svg') left 5px no-repeat;
+}
+
+.sidebar__list li:nth-child(2) {
+	background: url('/img/icons/оплата.svg') left 5px no-repeat;
+}
+
+.sidebar__list li:nth-child(3) {
+	background: url('/img/icons/обмен.svg') left 5px no-repeat;
+}
+.sidebar__list li:last-child {
+	background: url('/img/icons/телеграм.svg') left 5px no-repeat;
+}
+
+.sidebar__link {
+	color: #FFFFFF;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.content {
+	padding: 0px 0px 0px 30px;
+	grid-column: 3 / 4;
+}
+
+.content__title {
+	font-family: sundaybestrusbyalince, 'Times New Roman', Times, serif;
+}
+
+.content__gallery {
+	padding: 0px 0px 30px 0px;
+}
+
+.gallery__items {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+}
+
+.gallery__item {
+	position: relative;
+	padding: 0px 0px 85% 0px;
+}
+
+.gallery__item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery__item:first-child {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.gallery__item-title {
+	position: relative;
+	padding: 0px 0px 0px 20px;;
+	display: block;
+	z-index: 1;
+	font-family: sundaybestrusbyalince, 'Times New Roman', Times, serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.products__items {
+	display: grid;
+	column-gap: 30px;
+	row-gap: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.products__item {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template: auto 1fr minmax(40px, auto) / 1fr;
+}
+
+.products__image {
+	position: relative;
+	padding: 0px 0px 90% 0px;
+	margin: 0px 0px 20px 0px;
+}
+
+.products__image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.products__name {
+	padding: 0px 0px 20px 0px;
+	font-size: 24px;
+	line-height: 30px;
+	color: #1F1F1F;
+}
+
+.products__button {
+	padding: 0px 20px;
+	justify-self: center;
+	font-weight: 700;
+	color: #1F1F1F;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background-color: #FDA3C4;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 5px #7c7c7c;
+}
+
+.products__button:hover {	
+	background-color: #dd5788;
+	transition: 0.5s ease;
+}
+
+.footer {
+	padding: 15px;
+	display: grid;
+	grid-area: footer;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+	align-items: center;
+	background-color: #FDA3C4;
+}
+
+.footer__adress {
+	justify-self: center;
+	grid-column: 3/4;
+	color: #fff;
+	font-size: 20px;
+}
+
+.footer__adress-title {
+	font-family: sundaybestrusbyalince, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	color: #F40000;
+}
+
+.footer__contact {
+	grid-column: 4/5;
+	display: flex;
+	justify-content: start;
+	flex-wrap: wrap;
+}
+
+.footer__contact-title {
+	display: block;
+	color: #F40000;
+	font-family: sundaybestrusbyalince, 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+.footer__insta {
+	margin: 15px 0px 0px 15px;
+	
+}
+.footer__facebook {
+	margin: 15px 0px 0px 15px;
+}
